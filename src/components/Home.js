@@ -37,7 +37,7 @@ class Home extends Component {
 const mapStateToProps = (state) => {
     // console.log('connect in Home:',connect);
     // console.log('connect:',connect(mapStateToProps));
-    console.log('state in Home:',state);
+    // console.log('state in Home:',state);
     return {
         posts: state.posts
     }

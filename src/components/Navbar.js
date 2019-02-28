@@ -13,7 +13,6 @@ const Navbar = (props) => {
                     <li><NavLink exact to="/">Home</NavLink></li>
                     <li><NavLink to="/about">About</NavLink></li>
                     <li><NavLink to="/contact">Contact</NavLink></li>
-                    <li><NavLink to="/test">Test</NavLink></li>
                 </ul>
             </div>
         </nav>

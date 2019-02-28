@@ -12,16 +12,13 @@ function Rainbow (WrappedComponent) {
         return color;
       }
             
-    // const colours = ['red', 'orange', 'pink','green', 'blue', 'yellow' ];
-    // const randomColour = colours[Math.floor(Math.random() * 6)];
-    // console.log('randomColour:',randomColour);
     const colorCode = {color:getRandomColor()};
 
     return (props) => {
         // console.log('props in Rainbow:',props)
         return (
             <div style={colorCode}>
-                <WrappedComponent {...props}></WrappedComponent>
+                <WrappedComponent {...props} newColor={colorCode}></WrappedComponent>
             </div>
         )
     }

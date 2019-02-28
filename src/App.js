@@ -5,7 +5,6 @@ import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
 import Post from './components/Post'
-import Test from './components/Test'
 
 class App extends Component {
   render() {
@@ -17,7 +16,6 @@ class App extends Component {
             <Route exact path='/' component={Home}></Route>
             <Route path='/about' component={About}></Route>
             <Route path='/contact' component={Contact}></Route>
-            <Route path='/test' component={Test}></Route>
             <Route path="/:post_id" component={Post}></Route>
           </Switch>
         </div>

@@ -4,12 +4,12 @@ import { deletePost } from '../actions/postActions'
 
 class Post extends Component {
     handleClick = () => {
-      console.log('this.props in Post:',this.props);
+    //   console.log('this.props in Post:',this.props);
         this.props.deletePost(this.props.post.id);
         this.props.history.push('/');
     }
     render(){
-        console.log('this.props:',this.props);
+        // console.log('this.props:',this.props);
         const post = this.props.post ? (
             <div className="post">
                 <h4 className="center blue-text">{this.props.post.title}</h4>
@@ -33,9 +33,8 @@ class Post extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    console.log('state:',state);
-    console.log('ownProps:',ownProps);
-
+    // console.log('state:',state);
+    // console.log('ownProps:',ownProps);
     let id = ownProps.match.params.post_id;
     return {
         post: state.posts.find(post => post.id === id)

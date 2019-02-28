@@ -1,8 +1,12 @@
 import React from 'react'
 import Rainbow from '../hoc/Rainbow'
 
-const About = () => {
-    // console.log(props);
+const handleClick = () => {
+    window.location.reload();
+}
+
+const About = (props) => {
+    // console.log(props.newColor.color);
     return (
         <div className="container">
             <h4 className="center">About</h4>
@@ -16,7 +20,10 @@ const About = () => {
               Many flowers have evolved to be attractive to animals, so as to cause them to be vectors for the 
               transfer of pollen. After fertilization, the ovary of the flower develops into fruit containing seeds.</p>
 
-              <h5 className="center" id="h5">You can change this color by clicking reload button on browser</h5>
+              <div className="center" id="newColor">{props.newColor.color}</div>
+              <div className="center"><button className="waves-effect waves-light btn" onClick={handleClick}>
+                  Change color by Reload</button></div>
+              <h3 className="center">Color is changed by higher order function</h3>
         </div>
     )
 
